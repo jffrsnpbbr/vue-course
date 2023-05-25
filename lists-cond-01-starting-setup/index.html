@@ -22,7 +22,7 @@
       <button @click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul>
-        <li>Goal</li>
+        <li v-else>Goal</li>
       </ul>
     </section>
   </body>
