@@ -1,3 +1,5 @@
+
+
 const app = Vue.createApp({
   data() {
     return {
@@ -7,11 +9,17 @@ const app = Vue.createApp({
   },
   methods: {
     addGoal() {
-      this.goals.push(this.enteredGoalValue)
+      const goal = {
+        id: crypto.randomUUID(),
+        description: this.enteredGoalValue
+      }
+      this.goals.push(goal)
       this.enteredGoalValue = '';
     },
-    removeGoal(idx) {
-      this.goals.splice(idx, 1);
+    removeGoal(id) {
+      
+      const index = this.goals.findIndex(goal => goal.id === id);
+      this.goals.splice(index, 1);
     }
   }
 });
