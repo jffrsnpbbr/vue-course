@@ -4,6 +4,7 @@
     <ul v-for="friend in friends" :key="friend.id">
       <li>{{ friend.name }}</li>
     </ul>
+    <friend-contact></friend-contact>
   </section>
 </template>
 
