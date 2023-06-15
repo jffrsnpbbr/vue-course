@@ -1,0 +1,23 @@
+<template>
+  <section>
+    <h2>{{ username }}</h2>
+    <h3>{{ userage }}</h3>
+  </section>
+</template>
+
+<script>
+export default {
+  // props: ['name', 'age'],
+  props: {
+    username: {
+      type: String,
+      required: true,
+    },
+    userage: {
+      type: Number,
+      required: true,
+    },
+  },
+  methods: {}
+}
+</script>
