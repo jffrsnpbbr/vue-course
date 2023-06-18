@@ -37,6 +37,21 @@ export default {
       this.activeTopic = this.topics.find((topic) => topic.id === topicId);
     },
   },
+  mounted() {
+    setTimeout(() => {
+      this.topics.push({
+        id: crypto.randomUUID(),
+        title: 'test',
+        description: 'test',
+        fullText: 'test'
+      })
+    })
+  },
+  provide() {
+    return {
+      topics: this.topics
+    }
+  }
 };
 </script>
 
