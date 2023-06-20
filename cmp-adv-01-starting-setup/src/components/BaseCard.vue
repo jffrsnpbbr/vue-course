@@ -1,5 +1,10 @@
 <template>
-  <div class="base-card"><slot></slot></div>
+  <div class="base-card">
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
