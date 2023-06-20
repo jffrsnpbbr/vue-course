@@ -13,9 +13,10 @@
 </template>
 
 <script>
-import BaseCard from './BaseCard.vue'
+import BaseCard from './UI/BaseCard.vue'
+import BaseBadge from './UI/BaseBadge.vue';
 export default {
-  components: { BaseCard },
+  components: { BaseCard, BaseBadge },
   props: ['fullName', 'infoText', 'role'],
 };
 </script>
