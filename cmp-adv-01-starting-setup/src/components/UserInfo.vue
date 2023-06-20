@@ -15,7 +15,7 @@
 <script>
 import BaseCard from './BaseCard.vue'
 export default {
-  components: { 'base-card': BaseCard },
+  components: { BaseCard },
   props: ['fullName', 'infoText', 'role'],
 };
 </script>
