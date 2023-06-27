@@ -36,7 +36,8 @@ export default {
   provide() {
     return {
       resources: this.storedResources,
-      addResource: this.AddResource
+      addResource: this.addResource,
+      removeResource: this.removeResource
     }
   },
   computed: {
@@ -51,7 +52,7 @@ export default {
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },
-    AddResource(title, description, url) {
+    addResource(title, description, url) {
       const newResource = {
         id: crypto.randomUUID(),
         title,
@@ -60,6 +61,10 @@ export default {
       }
       this.storedResources.unshift(newResource);
       this.selectedTab = 'stored-resources';
+    },
+    removeResource(resId) {
+      const resIndex = this.storedResources.findIndex((res) => res.id === resId);
+      this.storedResources.splice(resIndex, 1);
     }
     
   }
